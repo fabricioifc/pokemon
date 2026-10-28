@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blastoise | Pokémon</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #071b36, #087eac);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #7de7ff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #d6f5ff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .pokemon {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .pokemon img {
+      width: 280px;
+      max-width: 100%;
+      filter: drop-shadow(0 10px 15px #001a30);
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    h2 {
+      color: #7de7ff;
+      margin-bottom: 15px;
+    }
+
+    .info p {
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .type {
+      display: inline-block;
+      background: #168ac0;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin: 5px 5px 15px 0;
+      font-weight: bold;
+    }
+
+    .abilities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 22px;
+      border-bottom: 4px solid #39c6f4;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #7de7ff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #e0f5ff;
+    }
+
+    .stats {
+      margin-top: 30px;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+    }
+
+    .stat {
+      margin: 15px 0;
+    }
+
+    .bar {
+      background: #173c57;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 7px;
+    }
+
+    .fill {
+      height: 100%;
+      background: linear-gradient(90deg, #21a8dc, #8af0ff);
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #c5efff;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .pokemon img {
+        width: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Blastoise</h1>
+    <p>O poderoso Pokémon Cascudo de Água!</p>
+  </header>
+
+  <main class="container">
+
+    <section class="pokemon">
+      <img
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+        alt="Blastoise, Pokémon do tipo Água"
+      >
+
+      <div class="info">
+        <h2>Sobre o Pokémon</h2>
+
+        <span class="type">💧 Tipo Água</span>
+
+        <p>
+          Blastoise é a evolução final de Squirtle e Wartortle.
+          É conhecido por seu casco resistente e pelos poderosos
+          canhões de água em suas costas.
+        </p>
+
+        <p><strong>Número na Pokédex:</strong> #009</p>
+        <p><strong>Altura:</strong> 1,6 m</p>
+        <p><strong>Peso:</strong> 85,5 kg</p>
+        <p><strong>Habilidades:</strong> Torrent e Rain Dish
+        (habilidade oculta).</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin-top: 35px;">⚡ Poderes e ataques</h2>
+
+      <div class="abilities">
+        <article class="card">
+          <h3>💦 Hydro Pump</h3>
+          <p>
+            Dispara um jato de água extremamente poderoso
+            contra o adversário.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🌊 Surf</h3>
+          <p>
+            Cria uma grande onda de água que atinge
+            os oponentes em batalha.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>💧 Water Pulse</h3>
+          <p>
+            Lança um pulso de água que pode confundir
+            o Pokémon adversário.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🛡️ Rapid Spin</h3>
+          <p>
+            Gira rapidamente para atacar e, em determinadas
+            condições, remover obstáculos do campo.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats">
+      <h2>📊 Atributos básicos</h2>
+
+      <div class="stat">
+        HP — 79
+        <div class="bar"><div class="fill" style="width: 39.5%"></div></div>
+      </div>
+
+      <div class="stat">
+        Ataque — 83
+        <div class="bar"><div class="fill" style="width: 41.5%"></div></div>
+      </div>
+
+      <div class="stat">
+        Defesa — 100
+        <div class="bar"><div class="fill" style="width: 50%"></div></div>
+      </div>
+
+      <div class="stat">
+        Ataque Especial — 85
+        <div class="bar"><div class="fill" style="width: 42.5%"></div></div>
+      </div>
+
+      <div class="stat">
+        Defesa Especial — 105
+        <div class="bar"><div class="fill" style="width: 52.5%"></div></div>
+      </div>
+
+      <div class="stat">
+        Velocidade — 78
+        <div class="bar"><div class="fill" style="width: 39%"></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Pokémon Blastoise | Água, força e resistência! 💧</p>
+    <p>Projeto desenvolvido com HTML e CSS.</p>
+  </footer>
+
+</body>
+</html>
